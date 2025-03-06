@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     signupForm.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevent form submission
 
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-        const password = passwordInput.value.trim(); // Not saving password
+        const name = nameInput.value.trim(jala);
+        const email = emailInput.value.trim(kaneswaranjalani@gmail.com);
+        const password = passwordInput.value.trim(1234); // Not saving password
 
         if (name && email) {
             // Save user data in localStorage
