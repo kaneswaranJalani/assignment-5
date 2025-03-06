@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    
+    <style>
+        .swiper {
+            width: 100%;
+            padding: 20px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="fixed top-0 left-0 w-full bg-gradient-to-r from-indigo-400 from-10% via-sky-400 via-30% to-emerald-600 to-90% p-10 border-b border-black text-left shadow-md z-50">
+        <div class="text-white flex justify-between items-center">
+            <div class="text-3xl font-bold text-white italic">
+                zebra 
+            </div>
+            <ul class="md:flex space-x-7 text-xl font-bold">
+                <li><a href="./index.html" class="text-white hover:underline">Home</a></li>
+                <li><a href="index.html#about" class="hover:underline">About</a></li>
+                <li><a href="index.html#services" class="hover:underline">Services</a></li>
+                <li><a href="index.html#product" class="hover:underline">Product</a></li>
+                <li>
+                    <div class="relative inline-block text-left">
+                        <button class="text-white rounded-md hover:bg-blue-500 focus:outline-black px-2" id="dropdownButton">Dropdown ▼</button>
+                        <div class="absolute hidden mt-2 w-48 bg-white rounded-md shadow-lg overflow-hidden border border-gray-200" id="dropdownMenu">
+                            <a href="feedback.html" class="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100">Feedback</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="product.html" class="hover:underline">Details</a></li>
+                <li><a href="login.html" class="bg-blue-500 px-4 py-2 rounded-lg text-white hover:text-black transition">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Background Image Section -->
+    <div class="relative h-[800px] w-full bg-center bg-cover" style="background-image: url('/home/uki/Desktop/assignment 5/assets 3/image/shop.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute flex inset-0 justify-center items-center text-white text-8xl font-bold"> 
+            Welcome to our webpage
+        </div>
+    </div>
+<!--section 2-->
+<section id="services">
+    <div class="bg-gray-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 py-10">
+    <div class="swiper">
+    <div class="swiper-wrapper ">   
+    <div class="swiper-slide">
+                 <img src="./assets 3/image/p1.jpeg" alt="photo 1"></div>
+               <div class="swiper-slide">
+                   <img src="./assets 3/image/p2.jpeg" alt="photo 2"></div></div>
+                                                                                              
+        <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination"></div>
+      </div>
+      
+       <div>
+           <h1 class="text-7xl font-bold px-10 py-5">Our Services</h1>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+               <div class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">
+                   <img class="rounded-xl" src="./assest2/image/scr1.png" alt="scr1">
+               <p> Xtra is the lightest theme on the market, providing unparalleled performance and the greatest search engine results.</p></div>
+               <div class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">
+                   <img class="rounded-xl" src="./assest2/image/scr2.png" alt="scr2">
+               <p class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">
+                   Purchase once and receive lifetime updates and additional features for free, no recurring fees!
+               </p></div>
+               <div class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">
+                   <img class="rounded-xl" src="./assest2/image/scr3.png" alt="scr3">
+               <p class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">Create and customize your website in real time, and see the results immediately with our unique preview mode. This will save you time!</p></div>
+               <div class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">
+                   <img class="rounded-xl" src="./assest2/image/scr4.png" alt="scr4">
+               <p class="text-gray-700 italic font-bold text-xl bg-white px-5 py-5 rounded-xl">Save time on website design by importing pixel-perfect, ready-to-use website demos from our extensive starting site collection.</p></div>
+           </div>
+       </div>
+   </div>
+   </div> 
+   </section>   
+    <!--section 4-->
+    <section id="product">
+        <div class="bg-white grid justify-items-center 8 h-screen overflow-auto">
+            <button class="bg-pink-100 text-red-800 text-xl font-bold px-3 py-2 rounded-lg mt-4">our products</button>
+                        <h1 class="text-5xl font-bold text-black mt-4">Check out our beautiful products</h1>
+                        <div class="relative inline-block">
+                        <button class="text-black font-bold text-2xl ml-350 rounded-md hover:bg-blue-500 focus:outline-black px-2" id="dropdownButton">drop down ▼</button>
+                            <div class="absolute hidden mt-2 w-48 bg-gray-700 rounded-md shadow-lg overflow-hidden border border-gray-500" id="dropdownMenu">
+                                <a href="" class="block px-4 py-2 text-black font-bold hover:bg-gray-100">all</a>
+                                <a href="" class="block px-4 py-2 text-black font-bold hover:bg-gray-100">shoes</a>
+                                <a href="" class="block px-4 py-2 text-black font-bold hover:bg-gray-100">slipper</a>
+                                <a href="" class="block px-4 py-2 text-black font-bold hover:bg-gray-100">heels</a>
+                                </div>
+                            </div>
+             <div class="container mx-auto px-5:px-20 grid grid-cols-3 md:grid-cols-3 gap-10 mt-10">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i1.jpeg" alt="p1">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i2.jpeg" alt="p2">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i3.jpeg" alt="p3">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i4.jpeg" alt="p4">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i6.jpeg" alt="p5">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i7.jpeg" alt="p6">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i8.jpeg" alt="p7">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i9.jpeg" alt="p8">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i10.jpeg" alt="p9">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i11.jpeg" alt="p10">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/i12.jpeg" alt="p11">
+                <img class="h-100 w-80 rounded-lg shadow-xl"src="./assets 3/image/8omRIid9.jpeg" alt="p12">
+                
+
+                
+        </div>
+        </div>
+        </section>
+
+    <!--section 7-->
+    <div>
+        <footer class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white">
+            <div class=" container mx-auto px-5 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-10 py-10">
+                <div>
+            <h2 class="text-3xl text-white text-bold">
+                <span class="text-black">web</span>zebra
+            </h2>
+                <ul class="text-white text-xl mt-4">
+                    <li>📍 123,achchelu,Neervely</li>
+                    <li>📞  +94 123 456 789</li>
+                    <li>📧  kaneswaranjalani@gmail.com</li>
+                </ul>
+                </div>
+            <div>
+                <h3 class="text-xl font-bold text-white">Useful Links</h3>
+                <ul class="mt-3 space-y-2 text-xl mt-4 space-x-3">
+                    <li> <a href="#" class="hover:text-orange-500">  home </a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  About us </a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Our services</a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Teams & Services</a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Privacy policy </a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white">Our Services</h3>
+                <ul class="mt-3 space-y-2 text-xl mt-4 space-y-3">
+                    <li> <a href="#" class="hover:text-orange-500">  web despt </a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Product management </a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Markecting</a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Grapic Design</a></li>
+                    <li> <a href="#" class="hover:text-orange-500">  Web development </a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white">Our Social Services</h3>
+                <p class="text-xl mt-4">This is our social services</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="p-2 bg-gray-700 rounded-full">
+                        <img src="./assets 3/image/twitter.jpg"
+                            alt="twitter" class="w-5 h-5"></a>
+                    <a href="#" class="p-2 bg-gray-700 rounded-full">
+                        <img src="./assets 3/image/facebook.jpg"
+                            alt="facebook" class="w-5 h-5"></a>
+                    <a href="#" class="p-2 bg-gray-700 rounded-full">
+                        <img src="./assets 3/image/youtube.jpg"
+                            alt="youtube" class="w-5 h-5"></a>
+                    <a href="#" class="p-2 bg-gray-700 rounded-full">
+                        <img src="./assets 3/image/linkedin.jpg"
+                            alt="linkedin" class="w-5 h-5"></a>
+                    <a href="#" class="p-2 bg-gray-700 rounded-full">
+                         <img src="./assets 3/image/instagram.svg"
+                            alt="instra" class="w-5 h-5"></a>
+                </div>
+            </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.getElementById("dropdownButton").addEventListener("click", function () {
+          document.getElementById("dropdownMenu").classList.toggle("hidden");
+        });
+        <!-- Swiper JS -->
+    
+    
+        var swiper = new Swiper(".swiper", {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+  
+      </script>
+    
+      
+   
+</body>
+</html>
