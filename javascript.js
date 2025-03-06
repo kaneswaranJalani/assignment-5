@@ -45,5 +45,3 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Data cleared.");
     });
 });
-
-

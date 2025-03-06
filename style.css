@@ -1,0 +1,10 @@
+.swiper {
+    width: 100%;
+    padding: 20px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
