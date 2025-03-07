@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="./javascript.js"></script>
+    <style>
+   /* Smooth page background */
+body {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title Animation */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Form Box */
+.signupForm {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.6s ease-in-out forwards;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Input Field Focus Effect */
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Clear Button */
+#clearData {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+/* Clear Button Hover */
+#clearData:hover {
+    background-color: #a71d2a;
+}
+
+/* Message Text */
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+    text-align: center;
+}
+
+/* Shake Animation for Invalid Input */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pop In Animation */
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Signup</h1>
+    <div class="signupForm">
+        <form id="signupForm"> <!-- Added missing id -->
+            <label for="name"> Name:</label>
+            <input type="text" id="name">
+
+            <label for="email"> Email:</label>
+            <input type="email" id="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+
+            <button id="submit" type="submit">Sign Up</button>
+        </form>
+
+        <!-- Added missing elements -->
+        <p id="savedName"></p>
+        <p id="savedEmail"></p>
+        <button id="clearData" type="button">Clear Data</button>
+    </div>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+    const signupForm = document.getElementById("signupForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const savedName = document.getElementById("savedName");
+    const savedEmail = document.getElementById("savedEmail");
+    const clearDataButton = document.getElementById("clearData");
+
+    // Load saved data when the page loads
+    if (localStorage.getItem("userName")) {
+        savedName.textContent = "Name: " + localStorage.getItem("userName");
+        savedEmail.textContent = "Email: " + localStorage.getItem("userEmail");
+    }
+
+    signupForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form submission
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim(); // Not saving password
+
+        if (name && email) {
+            // Save user data in localStorage
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+
+            // Display saved data
+            savedName.textContent = "Name: " + name;
+            savedEmail.textContent = "Email: " + email;
+            alert("Sign-up successful! Data saved.");
+
+            // Add bounce effect
+            signupForm.style.animation = "popIn 0.3s ease-in-out";
+
+            // Clear input fields after saving
+            nameInput.value = "";
+            emailInput.value = "";
+            passwordInput.value = "";
+        } else {
+            // Apply shake animation if input is empty
+            signupForm.style.animation = "shake 0.3s ease-in-out";
+            setTimeout(() => {
+                signupForm.style.animation = "";
+            }, 300);
+        }
+    });
+
+    // Clear data button
+    clearDataButton.addEventListener("click", () => {
+        localStorage.clear();
+        savedName.textContent = "";
+        savedEmail.textContent = "";
+        alert("Data cleared.");
+    });
+});
+
+    </script>
+
+</body>
+</html>
