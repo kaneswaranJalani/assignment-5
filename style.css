@@ -8,7 +8,7 @@
     align-items: center;
     padding: 20px;
 }
-body{
+.div1{
     width: 100px;
     background-color: rgb(247, 218, 181);
 }
@@ -19,7 +19,7 @@ h1{
 }
 
 form{
-    width:350%;
+    width:30%;
     margin-left: 600px;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ input{
     font-size: medium;
 }
 
-button{
+.button1{
     background-color: blue;
     width: 80%;
     padding: 10px;
