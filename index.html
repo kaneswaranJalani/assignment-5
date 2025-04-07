@@ -8,6 +8,16 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <style>
+        @keyframes marquee {
+            from { transform: translateX(100%); 
+            }
+            to { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            animation: marquee 8s linear infinite;
+        }
+    </style>
     
     
 </head>
@@ -144,6 +154,25 @@
                 </div>
         </div>
         </section>
+        <!--logos-->
+        <div class="flex items-center h-150 bg-sky-200 overflow-hidden w-full">
+            <div class="bg-white w-full overflow-hidden whitespace-nowrap">
+                <div class="text-center py-10">
+                    <button class="bg-pink-200 text-red-800 font-bold text-xl px-3 py-1 rounded-lg">Clients</button>
+                    <h1 class="text-black text-5xl mt-5 font-bold">They trusted us</h1>
+                </div>
+                <div class="container mx-auto px-5 md:px-20 grid grid-cols-1 md:grid-cols-10 py-10">
+                    <div class="flex space-x-16 animate-loop-scroll aria-hidden-true group-hover:paused">
+                    <img src="./assets 3/image/logo1.jpeg" alt="logo 1"class="inline-block animate-marquee">
+                    <img src="./assets 3/image/logo2.jpeg" alt="logo 2"class="inline-block animate-marquee">
+                    <img src="./assets 3/image/logo7.jpeg" alt="logo 3"class="inline-block animate-marquee">
+                    <img src="./assets 3/image/logo8.jpeg" alt="logo 4"class="inline-block animate-marquee">
+                    <img src="./assets 3/image/logo5.jpeg" alt="logo 5"class="inline-block animate-marquee">
+                    <img src="./assets 3/image/logo6.jpeg" alt="logo 6"class="inline-block animate-marquee">
+                    </div>
+                </div>
+                </div>
+                </div>
     <!--section 6-->
     <div>
         <footer class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white">
