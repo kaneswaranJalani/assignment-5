@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Load saved data when the page loads
     if (localStorage.getItem("userName")) {
-        savedName.textContent = "Name: " + localStorage.getItem("userName");
+        savedName.textContent = "+Name: " + localStorage.getItem("userName");
         savedEmail.textContent = "Email: " + localStorage.getItem("userEmail");
     }
 
