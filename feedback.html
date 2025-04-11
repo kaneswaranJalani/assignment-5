@@ -41,11 +41,11 @@
         <div class="relative bg-white shadow-xl rounded-2xl grid justify-items-center py-10 w-full max-w-xl mx-auto px-6">
             <h1 class="font-bold text-5xl py-5 text-center">feedback Form</h1>
             <p class="font-bold text-5xl">what prevented you from complething your purchase today?</p>
-            <button class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-8">Price was too high</button>
-            <button class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">cost of shipping was to expensive </button>
-            <button class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">There was lack payments</button>
-            <button class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">I`m just researching right now</button>
-            <button class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">Others</button>
+            <button id="bbn" class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-8">Price was too high</button>
+            <button id="bbn" class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">cost of shipping was to expensive </button>
+            <button id="bbn" class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">There was lack payments</button>
+            <button id="bbn" class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">I`m just researching right now</button>
+            <button id="bbn" class="bg-gray-200 text-black text-xl font-bold px-4 py-2 rounded-lg w-full hover:bg-gray-800  mt-3">Others</button>
         </div> 
     </div>
          
@@ -53,6 +53,10 @@
             document.getElementById("dropdownButton").addEventListener("click", function () {
               document.getElementById("dropdownMenu").classList.toggle("hidden");
             });
-          </script>   
+            document.getElementById("bbn").addEventListener("click", function () {
+  alert("Your feedback has been received!");
+});
+        </script>   
+          <script src="app.js"></script>
 </body>
 </html>

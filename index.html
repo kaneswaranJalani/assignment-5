@@ -52,11 +52,13 @@
     </nav>
      <!--section 2-->
     <!-- Background Image Section -->
+     <div id="para">
     <div class="relative h-[800px] w-full bg-center bg-cover" style="background-image: url('./assets\ 3/image/shop.jpg');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="absolute flex inset-0 justify-center items-center text-white text-8xl font-bold"> 
             Welcome to our webpage
         </div>
+    </div>
     </div>
 <!--section 3-->
 <section id="services">
@@ -100,6 +102,7 @@
    </section>   
     <!--section 4-->
     <section id="product">
+        <div id="animatedBox">
         <div class="bg-white grid justify-items-center 6 h-screen overflow-auto">
             <button class="bg-pink-100 text-red-800 text-xl font-bold px-3 py-2 rounded-lg mt-4">our products</button>
                         <h1 class="text-5xl font-bold text-black mt-4 ">Check out our beautiful products</h1>
@@ -120,6 +123,7 @@
                 
 
                 
+        </div>
         </div>
         </div>
         </section>
@@ -233,7 +237,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     
-    
+    <script>
+    document.getElementById("para").addEventListener("mouseover", function() {
+        document.getElementById("para").style.Color= "black";
+      });
+      document.getElementById("para").addEventListener("mouseout", function() {
+            document.getElementById("para").style.Color= "white";
+        });
+      </script>
      <script src="app.js"></script>
    
 </body>
