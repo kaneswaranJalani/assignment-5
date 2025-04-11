@@ -32,7 +32,7 @@ h1 {
 /* Form Box */
 .signupForm {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     background: white;
     padding: 40px;
     border-radius: 12px;
@@ -59,7 +59,7 @@ label {
 
 /* Input Fields */
 input {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -156,7 +156,7 @@ p {
 
             <label for="password">Password:</label>
             <input type="password" id="password">
-
+            <span class="toggle-password" onclick="togglePassword('password')">👁</span>
             <button id="submit" type="submit">Sign Up</button>
         </form>
 

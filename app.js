@@ -54,3 +54,9 @@ document.getElementById("para").addEventListener("mouseout", function() {
   document.getElementById("para").style.Color= "white";
 });
 
+// Toggle Password Visibility
+function togglePassword(fieldId ){
+  let field = document.getElementById(fieldId);
+  field.type = (field.type === 'password') ? 'text' : 'password';
+
+}
